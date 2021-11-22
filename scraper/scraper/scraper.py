@@ -3,15 +3,6 @@ from bs4 import BeautifulSoup
 import json
 
 
-# URL = "https://en.wikipedia.org/wiki/History_of_Mexico"
-# res = requests.get(URL)
-# soup = BeautifulSoup(res.content, 'html.parser')
-# results_div = soup.find_all('sup', class_="noprint")
-# print(len(results_div))
-# for text in results_div:
-#     parent = text.parent.get_text().strip()
-#     print(parent)
-
 def get_citations_needed_count(url):
     res = requests.get(url)
     soup = BeautifulSoup(res.content, 'html.parser')
